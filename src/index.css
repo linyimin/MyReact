@@ -1,0 +1,67 @@
+.main{
+  font-family: "sans-serif";
+  padding-left: 250px;
+} 
+
+.menu-list{
+  position:absolute;
+  left:0;
+  top:100px;
+  bottom:0;
+  width:200px;
+  list-style: none;
+  background-color: #eee;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  overflow:auto;
+} 
+
+
+ .menu-list li {
+  padding: 5px 15px;
+  color: #2175bc;
+}
+
+.menu-list li.is-active {
+  background-color: #2175bc;
+  color: #fff !important;
+} 
+
+.link {
+  display: block;
+  cursor: pointer;
+} 
+
+input {
+  padding: 7px;
+  outline: none;
+} 
+button {
+  color: #fff;
+  background-color: #38f;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+} 
+
+.wizard-finish-step li {
+  list-style: none;
+  padding: 10px;
+}
+.wizard-finish-step label {
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}
+
+.board-row button{
+  margin: 5px 5px;
+  width: 40px;
+  height: 40px;
+}
+
+.jumpButton{
+  border: 1px solid red;
+}
