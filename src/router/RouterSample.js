@@ -21,6 +21,10 @@ export default class RouterSample extends React.PureComponent {
             <Route path="/home" component={Home} />
             <Route path="/hello" component={Hello} />
             <Route path="/about" component={About} />
+            {/* <Route path="/" component={Home}>
+              <Route path="hellos" component={Hello} />
+              <Route path="abouts" component={About} />
+            </Route> */}
           </div>
         </div>
       </Router>
