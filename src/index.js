@@ -16,6 +16,8 @@ import Click from './component/4-ClickDemo';
 import HookComp from './component/6-Hook';
 import ChatRecipientPicker from './component/7-UserHook';
 import HookUserReducer from './component/8-userReducer';
+import HookApp from './component/9-HookContext';
+import TestApp from './router/Router';
 // import HelloHOC from './component/5-Hoc';
 const HelloHOC = React.lazy(() => import('./component/5-Hoc'));
 
@@ -26,11 +28,15 @@ const roteMap = {
   "Grame": Game,
   "SampleRouter": RouterSample,
   "RouterParam": RouterParams,
+  "Router": TestApp,
   "HOC": HelloHOC,
   "Hook": HookComp,
   "UserHook": ChatRecipientPicker,
-  "Clock": Click,
-  "UserReducer": HookUserReducer
+  "UserReducer": HookUserReducer,
+  "HookContext": HookApp,
+
+  "Clock": Click
+
 };
 
 class AppTest extends Component {

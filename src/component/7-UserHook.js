@@ -7,8 +7,8 @@ function useFriendStatus(friendID) {
         function handleStatusChange(status) {
             setIsOnline(status.isOnline);
         }
-
         console.log(friendID);
+        setIsOnline(friendID === 1);
         //ChatAPI.subscribeToFriendStatus(friendID, handleStatusChange);
         return () => {
             // ChatAPI.unsubscribeFromFriendStatus(friendID, handleStatusChange);
@@ -29,11 +29,11 @@ const friendList = [
 function ChatRecipientPicker() {
     const [recipientID, setRecipientID] = useState(1);
     const [recipientIDSec, setRecipientIDSec] = useState(1);
-    const isRecipientOnline = useFriendStatus(recipientIDSec);
+    const isRecipientOnline = useFriendStatus(recipientID);
 
     return (
         <>
-            {/* <Circle color={isRecipientOnline ? 'green' : 'red'} /> */}
+            <h1>{isRecipientOnline ? "online" : "offline"}</h1>
             <select
                 value={recipientID}
                 onChange={e => setRecipientID(Number(e.target.value))}
