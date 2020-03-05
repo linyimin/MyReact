@@ -11,6 +11,8 @@ import RouterParams from './router/RouterParams';
 import Click from './component/4-ClickDemo';
 import HookComp from './component/6-Hook';
 import ChatRecipientPicker from './component/7-UserHook';
+import HookApp from './component/9-HookContext';
+import TestApp from './component/test';
 // import HelloHOC from './component/5-Hoc';
 const HelloHOC = React.lazy(() => import('./component/5-Hoc'));
 
@@ -23,7 +25,9 @@ const roteMap = {
   "RouterParam": RouterParams,
   "HOC": HelloHOC,
   "Hook": HookComp,
-  "UserHook": ChatRecipientPicker
+  "UserHook": ChatRecipientPicker,
+  "HookContext": HookApp,
+  "Test": TestApp
 };
 
 class App extends Component {
