@@ -9,6 +9,7 @@ import {
 function run() {
 
     const inistate = { count: 0 };
+    const inistateSec = { sum: "linyimin" };
 
     //reducer
     const counter = (state = inistate, action) => {
@@ -24,14 +25,14 @@ function run() {
         }
     };
 
-    const todos = (state = {}) => state;
+    const todos = (state = inistateSec) => state;
     //创建store
     const store = createStore(
         combineReducers({
-          todos,
-          counter
+            todos,
+            counter
         })
-      );
+    );
     //const store = createStore(combineReducers(counter,todos));
 
     //创建action
@@ -52,17 +53,17 @@ function run() {
     //     console.log(store.getState());
     // }
     // store.subscribe(print);
-    store.subscribe(() => { console.log(store.getState()) });
+    store.subscribe(() => { console.log("store.subscribe订阅函数通知:", store.getState()) });
 
     store.dispatch(minusOne());
 
     // eslint-disable-next-line no-func-assign
     plusOne = bindActionCreators(plusOne, store.dispatch);
-    
-  
+
+
     plusOne();
     //plusOne();
-   // plusOne();
+    // plusOne();
     store.dispatch(customCount(5));
 
 }
@@ -72,7 +73,10 @@ class PureRedux extends Component {
     render() {
         return (
             <div> <button onClick={run}>Run</button>
-                <p>* 请打开控制台查看运行结果</p></div>
+                <p>* 请打开控制台查看运行结果</p>
+                {/* <p>{store.state.count}</p> */}
+            </div>
+
         );
     }
 }
