@@ -5,6 +5,7 @@ import App from './tododemo/components/App';
 import rootReducer from './tododemo/reducers';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux'
+import "antd/dist/antd.css";
 import './index.css';
 import Hello from './component/1-FuncComponent';
 import HelloMessage from './component/2-ClassHello';
@@ -18,10 +19,13 @@ import ChatRecipientPicker from './component/7-UserHook';
 import HookUserReducer from './component/8-userReducer';
 import HookApp from './component/9-HookContext';
 import TestApp from './router/Router';
+import FormLayoutDemo from './antd/form';
+import antdViewTest from './antd/test';
 // import HelloHOC from './component/5-Hoc';
 const HelloHOC = React.lazy(() => import('./component/5-Hoc'));
 
 const roteMap = {
+  "antdViewTest": antdViewTest,
   "pure-redux": PureRedux,
   "function-react": Hello,
   "class-react": HelloMessage,
@@ -34,8 +38,8 @@ const roteMap = {
   "UserHook": ChatRecipientPicker,
   "UserReducer": HookUserReducer,
   "HookContext": HookApp,
-
-  "Clock": Click
+  "Clock": Click,
+  "FormLayoutDemo": FormLayoutDemo
 
 };
 
