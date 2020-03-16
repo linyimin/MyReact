@@ -21,10 +21,17 @@ import HookApp from './component/9-HookContext';
 import TestApp from './router/Router';
 import FormLayoutDemo from './antd/form';
 import antdViewTest from './antd/test';
+import MouseTracker from './common/Mouse'
+import HookCounter from './component/test'
+import HookShow from './Hooks/index';
+import HookUseMemo from './Hooks/useMemo';
 // import HelloHOC from './component/5-Hoc';
 const HelloHOC = React.lazy(() => import('./component/5-Hoc'));
 
 const roteMap = {
+  "HookUseMemo":HookUseMemo,
+  "HookCounter":HookCounter, 
+  "HookDemoShow":HookShow,
   "antdViewTest": antdViewTest,
   "pure-redux": PureRedux,
   "function-react": Hello,
@@ -39,8 +46,8 @@ const roteMap = {
   "UserReducer": HookUserReducer,
   "HookContext": HookApp,
   "Clock": Click,
-  "FormLayoutDemo": FormLayoutDemo
-
+  "FormLayoutDemo": FormLayoutDemo,
+  "RenderProps":MouseTracker
 };
 
 class AppTest extends Component {
